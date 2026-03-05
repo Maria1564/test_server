@@ -8,3 +8,8 @@ export const registerValidation = [
   body("password", "Пароль содежит меьше 5 символов").isLength({ min: 5 }),
   body("birthDate", "Дата рождения невалидна").isDate(),
 ];
+
+export const loginValidation = [
+  body("email", "Почта невалидна").isEmail(),
+  body("password", "Пароль содежит меьше 5 символов").isLength({ min: 5 }),
+];
