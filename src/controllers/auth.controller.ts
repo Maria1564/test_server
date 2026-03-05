@@ -17,7 +17,7 @@ export const loginUser = async (req: Request, res: Response) => {
     const user = await authService.loginUser(email, password);
 
     if (!user) {
-      return res.status(401).json({ message: "Неверный email или пароль" });
+      return res.status(401).json({ errorMessage: "Неверный email или пароль" });
     }
 
     res.json(user);
